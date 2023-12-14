@@ -13,7 +13,6 @@ function capitalizeFirstLetter(word) {
 function NaNWord(word) {
   for (let char of word) {
     if (!isNaN(parseInt(char))) {
-      console.log(char);
       return false;
     }
   }
@@ -47,7 +46,6 @@ function objectSelectorCase(i, wordFormation) {
       threeWords[key][0] = capitalizeFirstLetter(threeWords[key][0]);
     }
   }
-  console.log(threeWords);
 }
 
 function wordCheck() {
