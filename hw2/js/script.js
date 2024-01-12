@@ -19,9 +19,9 @@ switch (userId) {
   case 2:
     let index2 = prompt("Введіть індекс символу, який потрібно видалити:");
     if (!isNaN(index2) && index2 >= 0 && index2 < userInput.length) {
-      let stringWithoutChar =
-        userInput.slice(0, index2) + userInput.slice(index2 + 1);
-      console.log(`Рядок без символу: ${stringWithoutChar}`);
+      let deleteSymbole = userInput.slice(index2 - 1, index2);
+      userInput = userInput.replace(deleteSymbole, "");
+      console.log(userInput);
     } else {
       console.log("Неправильний індекс. Будь ласка, введіть коректний індекс.");
     }
